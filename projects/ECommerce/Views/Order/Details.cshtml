@@ -1,0 +1,32 @@
+@* @model ECommerce.Models.OrderModel
+
+@{
+    ViewData["Title"] = "Order Details";
+}
+
+<div class="container">
+    <h1>Order Details</h1>
+    <dl class="row">
+        <dt class="col-sm-3">Order ID</dt>
+        <dd class="col-sm-9">@Model.OrderId</dd>
+
+        <dt class="col-sm-3">Order Date</dt>
+        <dd class="col-sm-9">@Model.OrderDate.ToString("d")</dd>
+
+        <dt class="col-sm-3">Total Amount</dt>
+        <dd class="col-sm-9">@Model.TotalCost.ToString("C")</dd>
+
+  
+
+        <dt class="col-sm-3">Items</dt>
+        <dd class="col-sm-9">
+            <ul>
+                @foreach (var item in Model.Items)
+                {
+                    <li>@item.ProductName - @item.Quantity x @item.UnitPrice.ToString("C")</li>
+                }
+            </ul>
+        </dd>
+    </dl>
+    <a class="btn btn-secondary" asp-controller="Order" asp-action="Index">Back to Orders</a>
+</div> *@

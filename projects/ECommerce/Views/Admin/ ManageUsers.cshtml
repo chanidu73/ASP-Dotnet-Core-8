@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Manage Users";
+}
+
+<h2>Manage Users</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @* Iterate over users here *@
+        <tr>
+            <td>johndoe</td>
+            <td>johndoe@example.com</td>
+            <td>Admin</td>
+            <td>
+                <a href="@Url.Action("Edit", "Users", new { id = 1 })" class="btn btn-warning">Edit</a>
+                <a href="@Url.Action("Delete", "Users", new { id = 1 })" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

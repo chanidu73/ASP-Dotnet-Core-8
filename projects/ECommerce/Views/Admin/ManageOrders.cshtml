@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Manage Orders";
+}
+
+<h2>Manage Orders</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @* Iterate over orders here *@
+        <tr>
+            <td>#1234</td>
+            <td>John Doe</td>
+            <td>@DateTime.Now.ToString("MM/dd/yyyy")</td>
+            <td>$250.00</td>
+            <td>Shipped</td>
+            <td>
+                <a href="@Url.Action("Details", "Orders", new { id = 1234 })" class="btn btn-info">Details</a>
+                <a href="@Url.Action("Edit", "Orders", new { id = 1234 })" class="btn btn-warning">Edit</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
