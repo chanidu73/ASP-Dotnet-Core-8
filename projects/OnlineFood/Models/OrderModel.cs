@@ -17,12 +17,17 @@ namespace OnlineFood.Models
         [ForeignKey("Restaurant")]
         public int RestaurantId { get; set; }
         public RestaurantModel Restaurant { get; set;}
+
+        [ForeignKey("MenuItem")]
+        public int MenuItemId { get; set; }
+        public MenuItemModel MenuItem { get; set;}
         public DateTime OrderDateTime { get; set; }
         public string OrderStatus { get; set ;}
         public decimal TotalAmount { get ;set; }
         public string PaymentStatus { get; set; }
         public PaymentModel Payment { get; set; }
         public DeliveryModel Delivery { get; set; }
+        public string DeliveryAddress { get; set; }
 
         public ICollection<OrderItemModel> OrderItems { get; set; }
 

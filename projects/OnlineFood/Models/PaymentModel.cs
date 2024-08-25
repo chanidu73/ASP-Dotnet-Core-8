@@ -18,6 +18,6 @@ namespace OnlineFood.Models
         public DateTime PaymentDate { get; set; }
         public string PaymentStatus { get; set; }
         public int TransactionId { get; set; }
-        
+        public decimal Amount { get; set; }
     }
 }

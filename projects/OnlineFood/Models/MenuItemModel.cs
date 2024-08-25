@@ -20,6 +20,8 @@ namespace OnlineFood.Models
         public string Category { get; set; }
         public string ImageUrl { get; set; }
         public string AvailabilityStatus { get; set; }
+        public ICollection<OrderModel>Orders { get; set; }
+
         
         
     }
